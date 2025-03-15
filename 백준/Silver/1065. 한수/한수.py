@@ -8,7 +8,7 @@ for i in range(1, N+1):
 
     else:
         han = list(map(int,str(i)))
-        if han[1]-han[0] == han[2]-han[1]:
+        if han[0]-han[1] == han[1]-han[2]:
             count += 1
 
 print(count)
