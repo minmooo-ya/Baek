@@ -19,16 +19,14 @@ def bfs(start):
 
     while queue:
         node = queue.popleft() 
-        count += 1  # 방문한 노드 수 증가
-
-        # 현재 노드와 연결된 모든 노드 탐색
+        count += 1
+        
         for neighbor in graph[node]:
-            if not visited[neighbor]:  # 아직 방문하지 않은 노드라면
-                visited[neighbor] = True  # 방문 처리
-                queue.append(neighbor)    # 큐에 추가
+            if not visited[neighbor]:  
+                visited[neighbor] = True  
+                queue.append(neighbor)    
 
-    return count
+    return count-1
 
-result = bfs(1)
 
-print(result - 1)
+print(bfs(1))
